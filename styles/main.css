@@ -167,14 +167,54 @@ figure img {
 .tech-icon {
   width: 100%; }
 
-.top-preview-row {
-  position: relative; }
+/* .top-preview-row {
+  position: relative;
+} */
+/* .bottom-preview-row {
+  position: relative;
+} */
+.bl-wrapper .box img {
+  position: absolute;
+  left: 0;
+  width: 40%;
+  left: 5%;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
+
+/* Caption Common Style */
+.bl-wrapper .box .caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  color: #f9f9f9;
+  z-index: 100;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  left: 0; }
+
+/** Caption 3: Fade **/
+.bl-wrapper .box .fade-caption, .bl-wrapper .box .scale-caption {
+  opacity: 0;
+  width: 22.5%;
+  height: 110%;
+  text-align: left;
+  /* padding: 15px; */
+  left: 5%; }
+
+/** Fade Caption :hover Behaviour **/
+.bl-wrapper .box:hover .fade-caption, .bl-wrapper .box:hover .scale-caption {
+  opacity: 1; }
 
 .tl-wrapper .box img {
   position: absolute;
   left: 0;
-  width: 20%;
-  left: 9%;
+  width: 22.5%;
+  left: 5%;
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
@@ -197,11 +237,11 @@ figure img {
 /** Caption 3: Fade **/
 .tl-wrapper .box .fade-caption, .tl-wrapper .box .scale-caption {
   opacity: 0;
-  width: 20%;
-  height: 97.5%;
+  width: 22.5%;
+  height: 110%;
   text-align: left;
   /* padding: 15px; */
-  left: 9%; }
+  left: 5%; }
 
 /** Fade Caption :hover Behaviour **/
 .tl-wrapper .box:hover .fade-caption, .tl-wrapper .box:hover .scale-caption {
@@ -210,8 +250,8 @@ figure img {
 .ml-wrapper .box img {
   position: absolute;
   left: 0;
-  width: 20%;
-  left: 30%;
+  width: 22.5%;
+  left: 27.5%;
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
@@ -234,14 +274,92 @@ figure img {
 /** Caption 3: Fade **/
 .ml-wrapper .box .fade-caption, .ml-wrapper .box .scale-caption {
   opacity: 0;
-  width: 20%;
-  height: 97.5%;
+  width: 22.5%;
+  height: 110%;
   text-align: left;
   /* padding: 15px; */
-  left: 30%; }
+  left: 27.5%; }
 
 /** Fade Caption :hover Behaviour **/
 .ml-wrapper .box:hover .fade-caption, .ml-wrapper .box:hover .scale-caption {
+  opacity: 1; }
+
+.mr-wrapper .box img {
+  position: absolute;
+  width: 22.5%;
+  right: 27.5%;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
+
+/* Caption Common Style */
+.mr-wrapper .box .caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  color: #f9f9f9;
+  z-index: 100;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  left: 0; }
+
+/** Caption 3: Fade **/
+.mr-wrapper .box .fade-caption, .mr-wrapper .box .scale-caption {
+  opacity: 0;
+  width: 22.5%;
+  height: 110%;
+  text-align: right;
+  /* padding: 15px; */
+  right: 27.5%; }
+
+/** Fade Caption :hover Behaviour **/
+.mr-wrapper .box:hover .fade-caption, .mr-wrapper .box:hover .scale-caption {
+  opacity: 1; }
+
+.tr-wrapper .box img {
+  position: absolute;
+  width: 22.5%;
+  right: 5%;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
+
+/* Caption Common Style */
+.tr-wrapper .box .caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  color: #f9f9f9;
+  z-index: 100;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  left: 0; }
+
+/** Caption 3: Fade **/
+.tr-wrapper .box .fade-caption, .tr-wrapper .box .scale-caption {
+  /*   opacity: 0;
+  width: 22.5%;
+  height: 97.5%;
+  text-align: left;
+  padding: 15px;
+  right: 5%; */
+  opacity: 0;
+  width: 22.5%;
+  height: 110%;
+  text-align: left;
+  /* padding: 15px; */
+  right: 5%; }
+
+/** Fade Caption :hover Behaviour **/
+.tr-wrapper .box:hover .fade-caption, .tr-wrapper .box:hover .scale-caption {
   opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */
