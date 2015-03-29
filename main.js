@@ -7,7 +7,9 @@
        paddingTop: '55px',
        paddingBottom: '55px',
        slidesNavigation: true,
-       controlArrows: false
+       controlArrows: false,
+      //  resize: true
+      // scrollOverflow: true,
     });
 
     var blogURL = 'http://api.tumblr.com/v2/blog/jimmythigpen.tumblr.com/posts/text?api_key=wSCsrQNh71emdz0eTvoZvt4pCkszK7noN9laB0cSCPQtUBRvMG&jsonp=?';
