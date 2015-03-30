@@ -118,13 +118,6 @@ figure img {
 .project-info-container {
   text-align: center; }
 
-.interact {
-  position: absolute;
-  left: 40%;
-  top: 40%;
-  font-size: 32px;
-  font-weight: 600; }
-
 .project-description {
   font-family: sans-serif;
   font-size: 24px;
@@ -177,5 +170,51 @@ footer {
 
 .social-icon {
   width: 10%; }
+
+img {
+  transition: all 250ms; }
+
+.photoset-cell {
+  position: relative;
+  overflow: hidden; }
+  .photoset-cell:hover img {
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -moz-transform: scale(1.1);
+    /* Firefox */
+    -webkit-transform: scale(1.1);
+    /* Safari and Chrome */
+    -o-transform: scale(1.1);
+    /* Opera */ }
+
+.view-text:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+.view-text {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 250ms; }
+  .view-text p {
+    text-align: center;
+    font-family: Hagin, sans-serif;
+    font-size: 30px;
+    opacity: 0;
+    color: #f9f9f9;
+    transition: all 250ms;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%; }
+  .view-text:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+    .view-text:hover p {
+      opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */

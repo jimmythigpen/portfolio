@@ -1,6 +1,12 @@
 (function(){
 
   $(document).ready(function() {
+
+    $('.photoset-grid-basic').photosetGrid({
+      highresLinks: true,
+    });
+
+
     $('#fullpage').fullpage({
        anchors:['home', 'work', 'blog', 'about'],
        menu: '.nav',
