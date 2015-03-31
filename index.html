@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <title>Jimmy Thigpen</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="styles/jquery.fullPage.css">
   <link href="http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400" rel="stylesheet" type="text/css">
-
 </head>
 <body>
 
@@ -20,19 +21,21 @@
 <div id="fullpage">
 
     <div class="section first-page">
-      <div class="first-page-name">
         <h1>Jimmy Thigpen</h1>
-        <h2>Web Developer</h2>
-      </div>
+        <h3>Beautiful. Simple. Web Development.</h3>
+        <a href="#work">
+          <i class="fa fa-chevron-down fa-3x animated bounce"></i>
+        </a>
     </div>
+
 
     <div class="section second-page">
 
       <div class="slide slide-1">
 
-        <h1 class="featured-work">My Featured Work</h1>
+        <h2 class="featured-work">Explore My Featured Work</h2>
 
-          <div class="photoset-grid-basic" data-layout="44">
+          <div class="photoset-grid-basic">
 
               <img src="images/trail.jpg" data-highres="#work/1"/>
 
@@ -61,17 +64,17 @@
 
         <p class="project-description">My final project at The Iron Yard, connecting people so they can enjoy the outdoors together.</p>
 
-        <div class="tech">
-          <span class="tech-icon-container"><img class="tech-icon" src="images/tech/html.png" /></span>
-          <span class="tech-icon-container"><img class="tech-icon" src="images/tech/css.png" /></span>
-          <span class="tech-icon-container"><img class="tech-icon" src="images/tech/neat.png" /></span>
-          <span class="tech-icon-container"><img class="tech-icon" src="images/tech/sass.png" /></span>
-          <span class="tech-icon-container"><img class="tech-icon" src="images/tech/js.png" /></span>
-          <span class="tech-icon-container"><img class="tech-icon" src="images/tech/ember.png" /></span>
-          <span class="tech-icon-container"><img class="tech-icon" src="images/tech/ai.png" /></span>
-          <span class="tech-icon-container"><img class="tech-icon" src="images/tech/ps.png" /></span>
-          <span class="tech-icon-container"><img class="tech-icon" src="images/tech/lr.png" /></span>
-        </div>
+          <div class="tech">
+            <span class="tech-icon-container"><img class="tech-icon" src="images/tech/html.png" /></span>
+            <span class="tech-icon-container"><img class="tech-icon" src="images/tech/css.png" /></span>
+            <span class="tech-icon-container"><img class="tech-icon" src="images/tech/neat.png" /></span>
+            <span class="tech-icon-container"><img class="tech-icon" src="images/tech/sass.png" /></span>
+            <span class="tech-icon-container"><img class="tech-icon" src="images/tech/js.png" /></span>
+            <span class="tech-icon-container"><img class="tech-icon" src="images/tech/ember.png" /></span>
+            <span class="tech-icon-container"><img class="tech-icon" src="images/tech/ai.png" /></span>
+            <span class="tech-icon-container"><img class="tech-icon" src="images/tech/ps.png" /></span>
+            <span class="tech-icon-container"><img class="tech-icon" src="images/tech/lr.png" /></span>
+          </div>
         </div>
 
         <div class="project-container">
@@ -162,7 +165,7 @@
     </div>
 
 <div class="section third-page">
-  <h1 class="blog-heading">Recent Blog Posts</h1>
+  <h1 class="blog-heading">Recent Posts</h1>
 
 <div class="blog-container">
 
@@ -180,16 +183,17 @@
 
 <script type="text/template" data-template-name="post-title-list">
 
-      <li class="post-item">
-        <h2 class="blog-title"><% title %></h2>
+      <li class="post-title-item">
+        <h4 class="blog-title"><% title %></h4>
+        <div><% date %></div>
       </li>
 
 </script>
 
 <script type="text/template" data-template-name="post-preview-list">
 
-      <li class="post-item">
-        <h2 class="blog-title"><% title %></h2>
+      <li class="post-preview-item">
+        <h2 class="blog-title-preview"><% title %></h2>
         <p><% body %></p>
       </li>
 
@@ -198,30 +202,67 @@
 </div>
 
 <div class="section fourth-page">
-  <h1 class="contact-heading">About</h1>
+  <h1 class="contact-heading">My name is Jimmy Thigpen</h1>
+
+<div class="about-container">
 
   <div class="about-summary">
-    <img class="about-image" src="images/me.jpg" />
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum corporis eius magnam voluptas labore nobis sit obcaecati commodi, accusamus dolorem? Ad, quis veritatis quibusdam natus officiis ipsum ipsa maxime placeat.</p>
+    <img class="about-image" src="images/me.png" />
+    <p>I'm a recent graduate from The Iron Yard, where I attended their three month long full imersion Front End Engineer course. I loved learning to build web applications and can't wait to continue growing my skills. If you'd like to hire me or just say hello feel free to contant me. </p>
   </div>
+
+<!--   <div class="about-tech">
+  <p>The tools I use to create beautiful web applications</p>
+  <ul class="tech-list">
+    <li><img class="about-icon" src="images/tech/html.png" /><p>HTML5</p></li>
+    <li><img class="about-icon" src="images/tech/css.png" /><p>CSS3</p></li>
+    <li><img class="about-icon" src="images/tech/neat.png" /><p>Bourbon Neat</p></li>
+    <li><img class="about-icon" src="images/tech/sass.png" /><p>SASS</p></li>
+    <li><img class="about-icon" src="images/tech/js.png" /><p>JavaScript</p></li>
+    <li><img class="about-icon" src="images/tech/ember.png" /><p></p>Ember</li>
+    <li><img class="about-icon" src="images/tech/ai.png" /><p>Adobe Illustrator</p></li>
+    <li><img class="about-icon" src="images/tech/ps.png" /><p>Adobe Photoshop</p></li>
+    <li><img class="about-icon" src="images/tech/lr.png" /><p>Adobe Lightroom</p></li>
+    <li><img class="about-icon" src="images/tech/backbone.png" /><p>Backbone</p></li>
+    <li><img class="about-icon" src="images/tech/parse.png" /><p>Parse</p></li>
+    <li><img class="about-icon" src="images/tech/underscore.png" /><p>Underscore</p></li>
+    <li><img class="about-icon" src="images/tech/jquery.png" /><p>jQuery</p></li>
+  </ul>
+</div> -->
 
   <div class="about-contact">
-    <a href="mailto:jmthigpen@me.com">Email Me</a>
+  <h2>Contact Me</h2>
+  <span><a href="tel:8432246569">(843) 224-6569</a></span>
+  <span><a href="mailto:jmthigpen@me.com?subject=I enjoy your work and wanted to talk.">Email Me</a></span>
+  <span><a href="http://goo.gl/2yO2lj">Resume</a></span>
   </div>
 
-  <footer>
-    <img class="social-icon" src="images/linkedIn.png" />
-    <img class="social-icon" src="images/twitter.png" />
-  </footer>
+</div>
+
 
 </div>
+
+<footer>
+  <a href="https://github.com/jimmythigpen">
+    <img class="social-icon" src="images/github.png" />
+  </a>
+  <a href="https://www.linkedin.com/in/thigpenjimmy">
+    <img class="social-icon" src="images/linkedIn.png" />
+  </a>
+  <a href="https://twitter.com/jimmythigpen">
+    <img class="social-icon" src="images/twitter.png" />
+  </a>
+</footer>
 
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="main.js"></script>
+
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="bower_components/moment/min/moment-with-locales.js"></script>
 <script src="jquery.fullPage.js"></script>
 <script src="bower_components/photoset-grid/jquery.photoset-grid.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>

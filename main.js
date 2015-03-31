@@ -2,20 +2,43 @@
 
   $(document).ready(function() {
 
-    $('.photoset-grid-basic').photosetGrid({
-      highresLinks: true,
-    });
 
 
     $('#fullpage').fullpage({
        anchors:['home', 'work', 'blog', 'about'],
        menu: '.nav',
        paddingTop: '55px',
-       paddingBottom: '55px',
+       paddingBottom: '50px',
        slidesNavigation: true,
        controlArrows: false,
-      //  resize: true
+      //  fitToSection: false,
+      //  resize: true,
       // scrollOverflow: true,
+
+      afterRender: function(){
+          $('.photoset-grid-basic').photosetGrid({
+            highresLinks: true,
+            lowresWidth: 9999,
+            layout: '44',
+          });
+
+
+      },
+      //
+      // afterResize: function() {
+      //   if (window.innerWidth < 800){
+      //     $('.photoset-grid-basic').photosetGrid({
+      //       highresLinks: true,
+      //       layout: '2222',
+      //     });
+      //   } else {
+      //     $('.photoset-grid-basic').photosetGrid({
+      //       highresLinks: true,
+      //       layout: '44',
+      //     });
+      //   }
+      //
+      // },
     });
 
     var blogURL = 'http://api.tumblr.com/v2/blog/jimmythigpen.tumblr.com/posts/text?api_key=wSCsrQNh71emdz0eTvoZvt4pCkszK7noN9laB0cSCPQtUBRvMG&jsonp=?';
@@ -29,25 +52,60 @@
     }).done(function(response) {
 
       renderListings(response.response.posts);
+      renderTitles(response.response.posts);
+
     });
 
     function renderListings(posts) {
-      var sliced = posts.slice(0,4);
-      sliced.forEach(function(post) {
+      var slicedPosts = posts.slice(0,3);
+      slicedPosts.forEach(function(post) {
+      var postBody = post.body;
+      // console.log(post);
 
-        var postInfo = renderTemplate('post-title-list', {
-          title: post.title,
-        });
-        $titleList.append(postInfo);
+      function truncate (text, limit) {
+        if (typeof text !== 'string')
+            return '';
+        if (typeof append == 'undefined')
+            append = '...';
+            // append = ('...' + '<a href=' + post.post_url + '>continue reading</a>');
+        var parts = text.split(' ');
+        if (parts.length > limit) {
+          for (var i = parts.length - 1; i > -1; --i) {
+              if (i+1 > limit) {
+                  parts.length = i;
+              }
+            }
+            parts.push(append);
+          }
+          return parts.join(' ');
+        }
+        var newPostBody = truncate(postBody, 36);
 
         var previewInfo = renderTemplate('post-preview-list', {
           title: post.title,
-          body: post.body,
+          body: newPostBody,
+          url: post.post_url
+          // tags: post.tags
         });
         $previewList.append(previewInfo);
-
       });
     }
+
+    //new
+    function renderTitles(posts){
+    var slicedTitles = posts.slice(0,7);
+    slicedTitles.forEach(function(post) {
+    var momentDate = moment(post.date).endOf('day').fromNow();
+    var postInfo = renderTemplate('post-title-list', {
+      title: post.title,
+      date: momentDate
+    });
+    $titleList.append(postInfo);
+    });
+  }
+
+
+
 
     function renderTemplate(name, data) {
       var $template = $('[data-template-name=' + name + ']').text();
