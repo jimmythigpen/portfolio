@@ -1,3 +1,3 @@
-# a portfolio to showcase my latest work is coming soon!
+# Working on a portfolio to showcase my latest work.
 
-### - Jimmy
+## Coming soon!
