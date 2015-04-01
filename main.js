@@ -59,16 +59,16 @@
     function renderListings(posts) {
       var slicedPosts = posts.slice(0,3);
       slicedPosts.forEach(function(post) {
-      var postBody = post.body;
-      // console.log(post);
+      // var postBody = post.body;
+
 
       function truncate (text, limit) {
-        if (typeof text !== 'string')
+        if (typeof text.body !== 'string')
             return '';
         if (typeof append == 'undefined')
-            append = '...';
-            // append = ('...' + '<a href=' + post.post_url + '>continue reading</a>');
-        var parts = text.split(' ');
+        console.log();
+            append = ('...' + '<a href=' + text.post_url + '> continue reading</a>');
+        var parts = text.body.split(' ');
         if (parts.length > limit) {
           for (var i = parts.length - 1; i > -1; --i) {
               if (i+1 > limit) {
@@ -79,13 +79,12 @@
           }
           return parts.join(' ');
         }
-        var newPostBody = truncate(postBody, 36);
+        var newPostBody = truncate(post, 36);
 
         var previewInfo = renderTemplate('post-preview-list', {
           title: post.title,
           body: newPostBody,
           url: post.post_url
-          // tags: post.tags
         });
         $previewList.append(previewInfo);
       });
@@ -98,6 +97,7 @@
     var momentDate = moment(post.date).endOf('day').fromNow();
     var postInfo = renderTemplate('post-title-list', {
       title: post.title,
+      url: post.post_url,
       date: momentDate
     });
     $titleList.append(postInfo);
