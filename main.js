@@ -18,7 +18,8 @@
       //  fixedElements: '.nav',
        fitToSection: false,
       //  resize: true,
-      scrollOverflow: true,
+      // scrollOverflow: true,
+      // autoScrolling:false
 
       //
       // afterResize: function() {
