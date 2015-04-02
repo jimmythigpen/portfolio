@@ -244,7 +244,7 @@ figure {
   p {
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    font-size: 3vmin;
+    font-size: 1.75vmax;
     margin: 0 0 5px 0;
     color: $primary-text;
   }
@@ -266,7 +266,7 @@ figure {
   border: 2px solid $primary-text;
   font-family: Hagin-Medium;
   padding: 5px 8px 0;
-  font-size: 2em;
+  font-size: 3vmax;
   border-radius: 3px;
   transition: all 250ms;
 
@@ -281,7 +281,7 @@ figure {
 .tech-icon-container {
   display: inline-block;
   max-width: 2%;
-  min-width: 30px;
+  min-width: 25px;
 }
 .tech-icon {
   width: 100%;
@@ -491,6 +491,18 @@ footer {
 
   }
 
+}
+
+@media screen and (max-width: 600px) {
+
+  footer {
+    text-align: center;
+    bottom: 5px;
+    height: 30px;
+    position: absolute;
+    left: 1%;
+    right: 1%;
+  }
 }
 
 @media screen and (max-height: 800px) {

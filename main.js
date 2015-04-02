@@ -16,10 +16,11 @@
        slidesNavigation: true,
        controlArrows: false,
       //  fixedElements: '.nav',
-       fitToSection: false,
+      //  fitToSection: false,
       //  resize: true,
       // scrollOverflow: true,
       // autoScrolling:false
+      responsive: 600
 
       //
       // afterResize: function() {
