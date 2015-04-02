@@ -116,6 +116,7 @@ html {
   }
   h3 {
     font-size: 30px;
+    font-weight: 400;
     font-family: Antonio-Medium, sans-serif;
     margin: 0;
     color: $secondary-text;
@@ -265,7 +266,7 @@ figure img {
   border: 2px solid $primary-text;
   font-family: Hagin-Medium;
   padding: 5px 8px 0;
-  font-size: 1.6em;
+  font-size: 2em;
   border-radius: 3px;
   transition: all 250ms;
 

@@ -12,7 +12,7 @@
       //  fixedElements: '.nav',
        fitToSection: false,
       //  resize: true,
-      // scrollOverflow: true,
+      scrollOverflow: true,
 
       afterRender: function(){
           $('.photoset-grid-basic').photosetGrid({
