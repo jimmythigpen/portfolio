@@ -11,7 +11,7 @@
        paddingBottom: '50px',
        slidesNavigation: true,
        controlArrows: false,
-       fixedElements: '.nav',
+      //  fixedElements: '.nav',
       //  fitToSection: false,
       //  resize: true,
       // scrollOverflow: true,
