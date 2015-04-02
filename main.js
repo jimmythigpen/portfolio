@@ -2,6 +2,12 @@
 
   $(document).ready(function() {
 
+    $('.photoset-grid-basic').photosetGrid({
+      highresLinks: true,
+      lowresWidth: 9999,
+      layout: '44',
+    });
+
     $('#fullpage').fullpage({
        anchors:['home', 'work', 'blog', 'about'],
        menu: '.nav',
@@ -14,15 +20,6 @@
       //  resize: true,
       scrollOverflow: true,
 
-      afterRender: function(){
-          $('.photoset-grid-basic').photosetGrid({
-            highresLinks: true,
-            lowresWidth: 9999,
-            layout: '44',
-          });
-
-
-      },
       //
       // afterResize: function() {
       //   if (window.innerWidth < 800){
