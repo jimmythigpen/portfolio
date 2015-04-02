@@ -7,8 +7,8 @@
     $('#fullpage').fullpage({
        anchors:['home', 'work', 'blog', 'about'],
        menu: '.nav',
-       paddingTop: '55px',
-       paddingBottom: '50px',
+      //  paddingTop: '55px',
+      //  paddingBottom: '50px',
        slidesNavigation: true,
        controlArrows: false,
       //  fitToSection: false,
