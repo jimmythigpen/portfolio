@@ -2,8 +2,6 @@
 
   $(document).ready(function() {
 
-
-
     $('#fullpage').fullpage({
        anchors:['home', 'work', 'blog', 'about'],
        menu: '.nav',
@@ -12,7 +10,7 @@
        slidesNavigation: true,
        controlArrows: false,
       //  fixedElements: '.nav',
-      //  fitToSection: false,
+       fitToSection: false,
       //  resize: true,
       // scrollOverflow: true,
 
@@ -91,7 +89,6 @@
       });
     }
 
-    //new
     function renderTitles(posts){
     var slicedTitles = posts.slice(0,7);
     slicedTitles.forEach(function(post) {
@@ -104,9 +101,6 @@
     $titleList.append(postInfo);
     });
   }
-
-
-
 
     function renderTemplate(name, data) {
       var $template = $('[data-template-name=' + name + ']').text();
