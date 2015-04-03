@@ -195,7 +195,8 @@ figure {
 
 .post-preview-item p {
   font-family: Roboto, sans-serif;
-  font-size: 1.75vmax;
+  /* font-size: 1.75vmax; */
+  font-size: 1.3em;
   margin: 1%;
   color: #212121;
   font-weight: 300; }
@@ -434,6 +435,9 @@ footer {
     width: 100%; }
 
   .nav {
+    display: none; }
+
+  .fa-chevron-down {
     display: none; }
 
   /*   .fourth-page {
