@@ -62,6 +62,18 @@ html {
     color: $primary-text;
   }
 }
+
+/* .fp-controlArrow.fp-next {
+  border-width: 4vmax 4vmax 4vmax 0;
+  left: 5px;
+}
+
+.fp-next {
+  border-width: 4vmax 4vmax 4vmax 0;
+  right: 5px;
+}
+ */
+
 /*
  * Animation for Chevron
 */
@@ -484,6 +496,13 @@ footer {
 
 }
 
+@media screen and (min-width: 800px) {
+  .fp-controlArrow {
+    display: none;
+  }
+}
+
+
 @media screen and (max-width: 800px) {
   .about-left {
     width: 95%;
@@ -502,7 +521,19 @@ footer {
       font-size: 2.5vmax;
     }
 
+  }
 
+  .slide-1 {
+    position: absolute;
+        left: -9999px;
+  }
+
+  .fp-slidesNav ul li:first-child {
+    display: none;
+  }
+
+  .fp-slidesNav {
+    display: none;
   }
 
 }
@@ -526,9 +557,7 @@ footer {
     display: none;
   }
 
-  .fp-slidesNav {
-    display: none;
-  }
+
 
 /*   .fourth-page {
   padding-bottom: 75px;

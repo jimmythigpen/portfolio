@@ -16,30 +16,16 @@
        paddingBottom: '50px',
        slidesNavigation: true,
        controlArrows: true,
+
       //  fixedElements: '.nav',
       //  fixedElements: '.nav',
        fitToSection: false,
       //  resize: true,
       // scrollOverflow: true,
       // autoScrolling:false
-      responsive: 600,
+      responsive: 800,
       touchSensitivity: 15
-
-      //
-      // afterResize: function() {
-      //   if (window.innerWidth < 800){
-      //     $('.photoset-grid-basic').photosetGrid({
-      //       highresLinks: true,
-      //       layout: '2222',
-      //     });
-      //   } else {
-      //     $('.photoset-grid-basic').photosetGrid({
-      //       highresLinks: true,
-      //       layout: '44',
-      //     });
-      //   }
-      //
-      // },
+      
     });
 
     var blogURL = 'http://api.tumblr.com/v2/blog/jimmythigpen.tumblr.com/posts/text?api_key=wSCsrQNh71emdz0eTvoZvt4pCkszK7noN9laB0cSCPQtUBRvMG&jsonp=?';
