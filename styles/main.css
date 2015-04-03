@@ -120,7 +120,8 @@ html {
     color: #26131c; }
 
 .featured-work {
-  font-size: 3.5vmax;
+  /* font-size: 3.5vmax; */
+  font-size: 3em;
   margin-top: 0;
   text-align: center;
   font-family: Roboto, sans-serif;
@@ -128,14 +129,6 @@ html {
   color: #26131c; }
   .featured-work .fa {
     color: #26131c; }
-
-.featured-work-details {
-  font-size: 2vmax;
-  margin-top: 10px;
-  text-align: center;
-  font-family: Roboto, sans-serif;
-  font-weight: 300;
-  color: #26131c; }
 
 .blog-container {
   max-width: 95%;
@@ -145,7 +138,8 @@ html {
   text-align: center;
   font-family: Roboto, sans-serif;
   font-weight: 300;
-  font-size: 3.5vmax;
+  /* font-size: 3.5vmax; */
+  font-size: 3em;
   margin-top: 0;
   color: #26131c; }
   .blog-heading img {
@@ -176,18 +170,21 @@ figure {
 
 .blog-title {
   font-family: Hagin-Medium, sans-serif;
-  font-size: 1.3vmax;
+  /* font-size: 1.3vmax; */
+  font-size: 1em;
   margin-bottom: 1%;
   display: inline-block; }
 
 .blog-date {
   font-family: Roboto, sans-serif;
-  font-size: 1vmax;
+  /* font-size: 1vmax; */
+  font-size: .8em;
   color: #727272; }
 
 .blog-title-preview {
   font-family: Hagin-Medium, sans-serif;
-  font-size: 3vmax;
+  /* font-size: 3vmax; */
+  font-size: 1.5em;
   font-weight: 400;
   margin: 1% 0;
   color: #212121;
@@ -196,13 +193,14 @@ figure {
 .post-preview-item p {
   font-family: Roboto, sans-serif;
   /* font-size: 1.75vmax; */
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: 1%;
   color: #212121;
   font-weight: 300; }
   .post-preview-item p a {
     color: #727272;
-    font-size: 1.5vmax;
+    /* font-size: 1.5vmax; */
+    font-size: 1em;
     text-decoration: none; }
 
 .post-title-item a {
@@ -219,12 +217,14 @@ figure {
     font-family: Hagin-Medium, sans-serif;
     text-align: center;
     margin: 5px 0 0 0;
-    font-size: 4vmax;
+    /* font-size: 4vmax; */
+    font-size: 3em;
     color: #212121; }
   .slide p {
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    font-size: 1.75vmax;
+    /* font-size: 1.75vmax; */
+    font-size: 1.2em;
     margin: 0 0 5px 0;
     color: #212121; }
 
@@ -242,7 +242,8 @@ figure {
   border: 2px solid #212121;
   font-family: Hagin-Medium;
   padding: 5px 8px 0;
-  font-size: 3vmax;
+  /* font-size: 3vmax; */
+  font-size: 2em;
   border-radius: 3px;
   transition: all 300ms; }
   .project-links a:hover {
@@ -267,7 +268,8 @@ figure {
   text-align: center;
   font-family: Roboto, sans-serif;
   font-weight: 300;
-  font-size: 3.5vmax;
+  /* font-size: 3.5vmax; */
+  font-size: 2em;
   margin-top: 0;
   color: #26131c; }
 
@@ -311,7 +313,8 @@ figure {
   text-align: center;
   vertical-align: middle; }
   .about-right p {
-    font-size: 1.75vmax;
+    /* font-size: 1.75vmax; */
+    font-size: 1.2em;
     font-family: Roboto;
     font-weight: 300; }
 
@@ -408,10 +411,11 @@ footer {
 
   .about-right {
     display: block;
-    width: 65%;
-    margin: 0 auto; }
-    .about-right p {
-      font-size: 2.5vmax; }
+    width: 95%;
+    margin: 0 auto;
+    /* p {
+      font-size: 2.5vmax;
+    } */ }
 
   .slide-1 {
     position: absolute;
@@ -455,7 +459,13 @@ footer {
     max-height: 65%; } }
 @media screen and (max-height: 600px) {
   .project-image {
-    max-height: 50%; } }
+    max-height: 50%; }
+
+  .nav {
+    display: none; }
+
+  .chevron-down {
+    display: none; } }
 @media screen and (max-height: 450px) {
   .project-image {
     max-height: 30%; } }
