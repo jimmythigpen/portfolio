@@ -12,13 +12,13 @@
     $('#fullpage').fullpage({
        anchors:['home', 'work', 'blog', 'about'],
        menu: '.nav',
-      //  paddingTop: '55px',
-      //  paddingBottom: '50px',
+       paddingTop: '55px',
+       paddingBottom: '50px',
        slidesNavigation: true,
        controlArrows: true,
       //  fixedElements: '.nav',
       //  fixedElements: '.nav',
-      //  fitToSection: false,
+       fitToSection: false,
       //  resize: true,
       // scrollOverflow: true,
       // autoScrolling:false

@@ -306,8 +306,8 @@ figure {
 
 footer {
   text-align: center;
-  bottom: 30px;
-  height: 30px;
+  bottom: 40px;
+  height: 40px;
   position: relative; }
   footer a {
     text-decoration: none; }
@@ -352,7 +352,7 @@ footer {
   .view-text p {
     text-align: center;
     font-family: Hagin-Medium, sans-serif;
-    font-size: 30px;
+    font-size: 4vmax;
     opacity: 0;
     color: #f9f9f9;
     transition: all 300ms;
@@ -410,6 +410,12 @@ footer {
   .contact-links {
     width: 100%; }
 
+  .nav {
+    display: none; }
+
+  .fp-slidesNav {
+    display: none; }
+
   /*   .fourth-page {
     padding-bottom: 75px;
   } */ }
@@ -418,7 +424,8 @@ footer {
     max-height: 65%; } }
 @media screen and (min-height: 800px) {
   .project-image {
-    max-width: 70%; } }
+    max-width: 70%;
+    max-height: 70%; } }
 @media screen and (max-height: 700px) {
   .project-image {
     max-height: 65%; } }
