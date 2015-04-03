@@ -264,13 +264,15 @@ figure {
 .about-contact {
   width: 85%;
   text-align: center;
-  margin: 30px auto 0;
+  margin: 20px auto 0;
   height: 40px; }
 
 .contact-links {
   margin-top: 15px;
   display: inline-block;
   width: 32%; }
+  .contact-links:first-child {
+    margin-top: 5px; }
 
 .contact-links a {
   text-decoration: none;
@@ -278,7 +280,7 @@ figure {
   border: 2px solid #212121;
   font-family: Hagin-Medium;
   padding: 5px 8px 0;
-  font-size: 1.7vmax;
+  font-size: 2.7vmax;
   border-radius: 3px;
   transition: all 250ms; }
   .contact-links a:hover {
@@ -393,7 +395,10 @@ footer {
     height: 30px;
     position: absolute;
     left: 1%;
-    right: 1%; } }
+    right: 1%; }
+
+  .contact-links {
+    width: 100%; } }
 @media screen and (max-height: 800px) {
   .project-image {
     max-height: 70%; } }
