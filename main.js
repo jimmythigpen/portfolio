@@ -6,21 +6,24 @@
       highresLinks: true,
       lowresWidth: 9999,
       layout: '44',
+      width: '90%'
     });
 
     $('#fullpage').fullpage({
        anchors:['home', 'work', 'blog', 'about'],
        menu: '.nav',
-       paddingTop: '55px',
-       paddingBottom: '50px',
+      //  paddingTop: '55px',
+      //  paddingBottom: '50px',
        slidesNavigation: true,
-       controlArrows: false,
+       controlArrows: true,
+      //  fixedElements: '.nav',
       //  fixedElements: '.nav',
       //  fitToSection: false,
       //  resize: true,
       // scrollOverflow: true,
       // autoScrolling:false
-      responsive: 600
+      responsive: 600,
+      touchSensitivity: 15
 
       //
       // afterResize: function() {
