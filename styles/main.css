@@ -273,7 +273,7 @@ figure {
   width: 85%;
   text-align: center;
   margin: 20px auto 0;
-  height: 40px; }
+  height: 100px; }
 
 .contact-links {
   margin-top: 15px;
@@ -408,7 +408,11 @@ footer {
     right: 1%; }
 
   .contact-links {
-    width: 100%; } }
+    width: 100%; }
+
+  /*   .fourth-page {
+    padding-bottom: 75px;
+  } */ }
 @media screen and (max-height: 800px) {
   .project-image {
     max-height: 65%; } }
