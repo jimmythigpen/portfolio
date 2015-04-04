@@ -165,7 +165,8 @@ html {
   color: $secondary-text;
 
   img {
-    height: 2.4vmax;
+    /* height: 2.4vmax; */
+    height: .7em;
     border-radius: 3px;
   }
 }
@@ -539,9 +540,9 @@ footer {
     display: none;
   }
 
-}
-
-@media screen and (max-width: 600px) {
+  .chevron-down {
+    display: none;
+  }
 
   footer {
     text-align: center;
@@ -552,6 +553,10 @@ footer {
     right: 1%;
   }
 
+}
+
+@media screen and (max-width: 600px) {
+
   .contact-links {
     width: 100%;
   }
@@ -560,15 +565,6 @@ footer {
     display: none;
   }
 
-  .fa-chevron-down {
-    display: none;
-  }
-
-
-
-/*   .fourth-page {
-  padding-bottom: 75px;
-} */
 }
 
 @media screen and (max-height: 800px) {
@@ -601,6 +597,15 @@ footer {
 
   .chevron-down {
     display: none;
+  }
+
+  footer {
+    text-align: center;
+    bottom: 5px;
+    height: 30px;
+    position: absolute;
+    left: 1%;
+    right: 1%;
   }
 }
 
