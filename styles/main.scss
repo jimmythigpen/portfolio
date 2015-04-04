@@ -63,16 +63,23 @@ html {
   }
 }
 
-/* .fp-controlArrow.fp-next {
-  border-width: 4vmax 4vmax 4vmax 0;
-  left: 5px;
+.section-left-arrow {
+  position: absolute;
+  top: 45%;
+  font-size: 3em;
+  left: 10px;
+  z-index: 1;
+
 }
 
-.fp-next {
-  border-width: 4vmax 4vmax 4vmax 0;
-  right: 5px;
+.section-right-arrow {
+  position: absolute;
+  top: 45%;
+  font-size: 3em;
+  right: 10px;
+  z-index: 1;
+
 }
- */
 
 /*
  * Animation for Chevron
@@ -148,6 +155,16 @@ html {
   }
 }
 
+.explore-work {
+  font-size: 3em;
+  margin-top: 0;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  color: #26131c;
+  margin: .5em 0;
+}
+
 //
 //Blog Section
 //
@@ -197,6 +214,7 @@ figure {
   font-family: Hagin-Medium, sans-serif;
   /* font-size: 1.3vmax; */
   font-size: 1em;
+  font-weight: 400;
   margin-bottom: 1%;
   display: inline-block;
 }
@@ -412,6 +430,7 @@ footer {
 //
 .photoset-grid-basic {
   margin: 0 auto;
+  z-index: 99;
 
   img {
     transition: all 300ms;
@@ -500,8 +519,8 @@ footer {
 
 }
 
-@media screen and (min-width: 800px) {
-  .fp-controlArrow {
+@media screen and (min-width: 600px) {
+  .explore-work {
     display: none;
   }
 }
@@ -509,7 +528,7 @@ footer {
 
 @media screen and (max-width: 800px) {
   .about-left {
-    width: 95%;
+    width: 100%;
 
     img {
       width: 40%;
@@ -521,10 +540,6 @@ footer {
     width: 95%;
     margin: 0 auto;
 
-    /* p {
-      font-size: 2.5vmax;
-    } */
-
   }
 
   .slide-1 {
@@ -533,7 +548,7 @@ footer {
   }
 
   .fp-slidesNav ul li:first-child {
-    display: none;
+    display: hidden;
   }
 
   .fp-slidesNav {
@@ -565,11 +580,31 @@ footer {
     display: none;
   }
 
+  .about-left img{
+    width: 60%;
+  }
+
+  .section-left-arrow {
+    display: none;
+  }
+
+  .section-right-arrow {
+    display: none;
+  }
+
 }
+
+
+@media screen and (max-width: 700px) {
+
+}
+
+
 
 @media screen and (max-height: 800px) {
   .project-image {
     max-height: 65%;
+    max-width: 70%;
   }
 }
 

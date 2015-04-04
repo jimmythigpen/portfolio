@@ -49,16 +49,20 @@ html {
     text-decoration: none;
     color: #212121; }
 
-/* .fp-controlArrow.fp-next {
-  border-width: 4vmax 4vmax 4vmax 0;
-  left: 5px;
-}
+.section-left-arrow {
+  position: absolute;
+  top: 45%;
+  font-size: 3em;
+  left: 10px;
+  z-index: 1; }
 
-.fp-next {
-  border-width: 4vmax 4vmax 4vmax 0;
-  right: 5px;
-}
- */
+.section-right-arrow {
+  position: absolute;
+  top: 45%;
+  font-size: 3em;
+  right: 10px;
+  z-index: 1; }
+
 /*
  * Animation for Chevron
 */
@@ -130,6 +134,15 @@ html {
   .featured-work .fa {
     color: #26131c; }
 
+.explore-work {
+  font-size: 3em;
+  margin-top: 0;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  color: #26131c;
+  margin: .5em 0; }
+
 .blog-container {
   max-width: 95%;
   margin: 0 auto; }
@@ -173,6 +186,7 @@ figure {
   font-family: Hagin-Medium, sans-serif;
   /* font-size: 1.3vmax; */
   font-size: 1em;
+  font-weight: 400;
   margin-bottom: 1%;
   display: inline-block; }
 
@@ -332,7 +346,8 @@ footer {
   padding: 0 5px; }
 
 .photoset-grid-basic {
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 99; }
   .photoset-grid-basic img {
     transition: all 300ms; }
 
@@ -401,29 +416,26 @@ footer {
 
   .about-contact {
     width: 95%; } }
-@media screen and (min-width: 800px) {
-  .fp-controlArrow {
+@media screen and (min-width: 600px) {
+  .explore-work {
     display: none; } }
 @media screen and (max-width: 800px) {
   .about-left {
-    width: 95%; }
+    width: 100%; }
     .about-left img {
       width: 40%; }
 
   .about-right {
     display: block;
     width: 95%;
-    margin: 0 auto;
-    /* p {
-      font-size: 2.5vmax;
-    } */ }
+    margin: 0 auto; }
 
   .slide-1 {
     position: absolute;
     left: -9999px; }
 
   .fp-slidesNav ul li:first-child {
-    display: none; }
+    display: hidden; }
 
   .fp-slidesNav {
     display: none; }
@@ -443,10 +455,20 @@ footer {
     width: 100%; }
 
   .nav {
+    display: none; }
+
+  .about-left img {
+    width: 60%; }
+
+  .section-left-arrow {
+    display: none; }
+
+  .section-right-arrow {
     display: none; } }
 @media screen and (max-height: 800px) {
   .project-image {
-    max-height: 65%; } }
+    max-height: 65%;
+    max-width: 70%; } }
 @media screen and (min-height: 800px) {
   .project-image {
     max-width: 70%;
