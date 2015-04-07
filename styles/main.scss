@@ -193,7 +193,7 @@ html {
   color: #26131c;
   margin: 0 0 .5em 0;
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 5%;
   right: 5%;
   z-index: 3;
@@ -565,7 +565,7 @@ footer {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .about-left {
     width: 100%;
 
@@ -685,10 +685,33 @@ footer {
     left: 1%;
     right: 1%;
   }
+
+  .explore-work {
+    display: none;
+  }
+
+  .section-left-arrow {
+    display: block;
+  }
+
+  .section-right-arrow {
+    display: block;
+  }
+
+  .slide-1 {
+    position: static;
+  }
+
+  .featured-work {
+    font-size: 2em;
+  }
+
 }
 
 @media screen and (max-height: 450px) {
   .project-image {
-    max-height: 30%;
+    display: none;
   }
+
+
 }
