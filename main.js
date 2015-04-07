@@ -1,10 +1,8 @@
-$("body").css("display", "none");
-
 (function(){
 
   $(document).ready(function() {
 
-    $("body").css("display", "block");
+    $(".hidden").css("display", "block");
 
     $(".section-right-arrow").on("click", function(){
       $.fn.fullpage.moveSlideRight();

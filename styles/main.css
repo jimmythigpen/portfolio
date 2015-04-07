@@ -154,6 +154,9 @@ html {
   right: 5%;
   z-index: 3; }
 
+.hidden {
+  display: none; }
+
 .blog-container {
   max-width: 85%;
   margin: 0 auto; }
