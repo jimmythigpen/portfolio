@@ -1,5 +1,11 @@
 (function(){
 
+  $('.photoset-grid-basic').photosetGrid({
+    highresLinks: true,
+    lowresWidth: 9999,
+    layout: '44',
+  });
+
   $(document).ready(function() {
 
     $(".section-right-arrow").on("click", function(){
@@ -16,12 +22,6 @@
 
     $(".mobile-left").on("click", function(){
       $.fn.fullpage.moveSlideLeft();
-    });
-
-    $('.photoset-grid-basic').photosetGrid({
-      highresLinks: true,
-      lowresWidth: 9999,
-      layout: '44',
     });
 
     $('#fullpage').fullpage({
