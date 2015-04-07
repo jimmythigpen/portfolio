@@ -1,12 +1,3 @@
-@font-face {
-  font-family: Hagin-Medium;
-  src: url("../styles/fonts/Hagin-Caps-Medium.otf"); }
-@font-face {
-  font-family: Hagin-Thin;
-  src: url("../styles/fonts/Hagin-Caps-Thin.otf"); }
-@font-face {
-  font-family: Antonio-Medium;
-  src: url("../styles/fonts/Antonio-Regular.ttf"); }
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -19,6 +10,12 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
+@font-face {
+  font-family: Hagin-Medium;
+  src: url("../styles/fonts/Hagin-Caps-Medium.otf"); }
+@font-face {
+  font-family: Antonio-Medium;
+  src: url("../styles/fonts/Antonio-Regular.ttf"); }
 .first-page {
   background: linear-gradient(rgba(197, 198, 123, 0.8), rgba(197, 198, 123, 0.8)), url("../images/bg.png"); }
 
@@ -119,8 +116,7 @@ html {
   color: #f9f9f9; }
 
 .first-page {
-  text-align: center;
-  /* padding: 55px 0 50px; */ }
+  text-align: center; }
   .first-page h1 {
     font-size: 6.3em;
     font-weight: 400;
@@ -134,23 +130,11 @@ html {
     margin: 0;
     color: #26131c; }
 
-/* .second-page {
-  padding: 0;
-}
-
-.third-page {
-  padding: 55px 0 50px;
-}
-
-.fourth-page {
-  padding: 55px 0 50px;
-} */
 .featured-work {
-  /* font-size: 3.5vmax; */
   font-size: 3em;
   margin-top: 0;
   text-align: center;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #26131c; }
   .featured-work .fa {
@@ -160,7 +144,7 @@ html {
   font-size: 2.5em;
   margin-top: 0;
   text-align: center;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #26131c;
   margin: 0 0 .5em 0;
@@ -176,14 +160,12 @@ html {
 
 .blog-heading {
   text-align: center;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
-  /* font-size: 3.5vmax; */
   font-size: 3em;
   margin-top: 0;
   color: #26131c; }
   .blog-heading img {
-    /* height: 2.4vmax; */
     height: .7em;
     border-radius: 3px; }
 
@@ -213,21 +195,18 @@ figure {
 
 .blog-title {
   font-family: Hagin-Medium, sans-serif;
-  /* font-size: 1.3vmax; */
   font-size: 1em;
   font-weight: 400;
   margin-bottom: 1%;
   display: inline-block; }
 
 .blog-date {
-  font-family: Roboto, sans-serif;
-  /* font-size: 1vmax; */
+  font-family: "Roboto", sans-serif;
   font-size: .8em;
   color: #727272; }
 
 .blog-title-preview {
   font-family: Hagin-Medium, sans-serif;
-  /* font-size: 3vmax; */
   font-size: 1.5em;
   font-weight: 400;
   margin: 0 0 1% 0;
@@ -235,15 +214,13 @@ figure {
   display: inline-block; }
 
 .post-preview-item p {
-  font-family: Roboto, sans-serif;
-  /* font-size: 1.75vmax; */
+  font-family: "Roboto", sans-serif;
   font-size: 1.2em;
   margin: 1%;
   color: #212121;
   font-weight: 300; }
   .post-preview-item p a {
     color: #727272;
-    /* font-size: 1.5vmax; */
     font-size: 1em;
     text-decoration: none; }
 
@@ -261,13 +238,11 @@ figure {
     font-family: Hagin-Medium, sans-serif;
     text-align: center;
     margin: 5px 0 0 0;
-    /* font-size: 4vmax; */
     font-size: 3em;
     color: #212121; }
   .slide p {
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
-    /* font-size: 1.75vmax; */
     font-size: 1.2em;
     margin: 0 0 5px 0;
     color: #212121; }
@@ -286,7 +261,6 @@ figure {
   border: 2px solid #212121;
   font-family: Hagin-Medium;
   padding: 5px 8px 0;
-  /* font-size: 3vmax; */
   font-size: 2em;
   border-radius: 3px;
   transition: all 300ms; }
@@ -310,9 +284,8 @@ figure {
 
 .about-heading {
   text-align: center;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
-  /* font-size: 3.5vmax; */
   font-size: 3em;
   margin-top: 0;
   color: #26131c; }
@@ -357,9 +330,8 @@ figure {
   text-align: center;
   vertical-align: middle; }
   .about-right p {
-    /* font-size: 1.75vmax; */
     font-size: 1.2em;
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     color: #212121; }
 
@@ -387,13 +359,9 @@ footer {
   .photoset-cell:hover img {
     transform: scale(1.1);
     -ms-transform: scale(1.1);
-    /* IE 9 */
     -moz-transform: scale(1.1);
-    /* Firefox */
     -webkit-transform: scale(1.1);
-    /* Safari and Chrome */
-    -o-transform: scale(1.1);
-    /* Opera */ }
+    -o-transform: scale(1.1); }
 
 .view-text:before {
   content: '';
@@ -435,7 +403,6 @@ footer {
     display: none; }
 
   .blog-container {
-    /* max-width: 600px; */
     width: 95%; }
 
   .preview-list-container {
@@ -499,7 +466,10 @@ footer {
     height: 100px; }
 
   .featured-work {
-    font-size: 1.75em; } }
+    font-size: 1.75em; }
+
+  .explore-arrow {
+    display: none; } }
 @media screen and (max-height: 800px) {
   .project-image {
     max-height: 65%;
@@ -527,24 +497,6 @@ footer {
   .fp-slidesNav {
     display: none; }
 
-  /*   footer {
-    text-align: center;
-    bottom: 5px;
-    height: 30px;
-    position: absolute;
-    left: 1%;
-    right: 1%;
-  } */
-  /* .explore-work {
-    display: none;
-  } */
-  /* .section-left-arrow {
-    display: block;
-  }
-
-  .section-right-arrow {
-    display: block;
-  } */
   .featured-work {
     font-size: 2em; } }
 @media screen and (max-height: 450px) {
