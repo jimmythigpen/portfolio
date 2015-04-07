@@ -6,6 +6,37 @@
     layout: '44',
   });
 
+  $('#fullpage').fullpage({
+     anchors:['home', 'work', 'blog', 'contact'],
+     menu: '.nav',
+     paddingTop: '55px',
+     paddingBottom: '50px',
+     slidesNavigation: true,
+     controlArrows: false,
+     fitToSection: false,
+     responsive: 800,
+     touchSensitivity: 15,
+
+    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+      var loadedSlide = $(this);
+      if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 2 || slideIndex == 3 || slideIndex == 4 || slideIndex == 5 || slideIndex == 6 || slideIndex == 7 || slideIndex == 8){
+        $(".section-left-arrow").css("z-index", 3);
+        $(".section-right-arrow").css("z-index", 3);
+        } else {
+        $(".section-left-arrow").css("z-index", 1);
+        $(".section-right-arrow").css("z-index", 1);
+        }
+      },
+
+      onSlideLeave: function( anchorLink, index, slideIndex, direction){
+       var leavingSlide = $(this);
+       if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 8 && direction == 'left'){
+         $(".section-left-arrow").css("z-index", 1);
+         $(".section-right-arrow").css("z-index", 1);
+       }
+     },
+  });
+
   $(document).ready(function() {
 
     $(".section-right-arrow").on("click", function(){
@@ -22,37 +53,6 @@
 
     $(".mobile-left").on("click", function(){
       $.fn.fullpage.moveSlideLeft();
-    });
-
-    $('#fullpage').fullpage({
-       anchors:['home', 'work', 'blog', 'contact'],
-       menu: '.nav',
-       paddingTop: '55px',
-       paddingBottom: '50px',
-       slidesNavigation: true,
-       controlArrows: false,
-       fitToSection: false,
-       responsive: 800,
-       touchSensitivity: 15,
-
-      afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-        var loadedSlide = $(this);
-        if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 2 || slideIndex == 3 || slideIndex == 4 || slideIndex == 5 || slideIndex == 6 || slideIndex == 7 || slideIndex == 8){
-          $(".section-left-arrow").css("z-index", 3);
-          $(".section-right-arrow").css("z-index", 3);
-          } else {
-          $(".section-left-arrow").css("z-index", 1);
-          $(".section-right-arrow").css("z-index", 1);
-          }
-        },
-
-        onSlideLeave: function( anchorLink, index, slideIndex, direction){
-         var leavingSlide = $(this);
-         if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 8 && direction == 'left'){
-           $(".section-left-arrow").css("z-index", 1);
-           $(".section-right-arrow").css("z-index", 1);
-         }
-       },
     });
 
     var blogURL = 'http://api.tumblr.com/v2/blog/jimmythigpen.tumblr.com/posts/text?api_key=wSCsrQNh71emdz0eTvoZvt4pCkszK7noN9laB0cSCPQtUBRvMG&jsonp=?';
