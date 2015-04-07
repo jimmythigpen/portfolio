@@ -54,7 +54,6 @@
 
         onSlideLeave: function( anchorLink, index, slideIndex, direction){
            var leavingSlide = $(this);
-
            if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 8 && direction == 'left'){
              $(".section-left-arrow").css("z-index", 1);
              $(".section-right-arrow").css("z-index", 1);
