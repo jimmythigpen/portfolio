@@ -155,7 +155,7 @@ html {
   z-index: 3; }
 
 .blog-container {
-  max-width: 95%;
+  max-width: 85%;
   margin: 0 auto; }
 
 .blog-heading {
@@ -337,7 +337,7 @@ figure {
 
 footer {
   text-align: center;
-  bottom: 40px;
+  bottom: 50px;
   height: 40px;
   position: relative; }
   footer a {
@@ -486,7 +486,7 @@ footer {
     max-height: 65%; } }
 @media screen and (max-height: 600px) {
   .project-image {
-    max-height: 50%; }
+    max-height: 45%; }
 
   .nav {
     display: none; }
@@ -498,7 +498,11 @@ footer {
     display: none; }
 
   .featured-work {
-    font-size: 2em; } }
+    font-size: 2em; }
+
+  .slide p {
+    width: 85%;
+    margin: 0 auto; } }
 @media screen and (max-height: 450px) {
   .project-image {
     display: none; } }

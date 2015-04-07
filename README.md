@@ -1,3 +1,3 @@
-# Working on a portfolio to showcase my latest work.
+# Welcome to my portfolio's repo
 
-## Coming soon!
+## Check it out [Here!](www.jimmythigpen.com)

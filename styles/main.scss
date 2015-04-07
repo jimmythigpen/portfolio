@@ -189,7 +189,7 @@ $hint-text: #727272;
 //Blog Section
 //
 .blog-container {
-  max-width: 95%;
+  max-width: 85%;
   margin: 0 auto;
 }
 
@@ -420,7 +420,7 @@ figure {
 //
 footer {
   text-align: center;
-  bottom: 40px;
+  bottom: 50px;
   height: 40px;
   position: relative;
 
@@ -647,7 +647,7 @@ footer {
 @media screen and (max-height: 600px) {
 
   .project-image {
-    max-height: 50%;
+    max-height: 45%;
   }
 
   .nav {
@@ -665,10 +665,15 @@ footer {
   .featured-work {
     font-size: 2em;
   }
+
+  .slide p {
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-height: 450px) {
-  
+
   .project-image {
     display: none;
   }
