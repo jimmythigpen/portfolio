@@ -2,8 +2,6 @@
 
   $(document).ready(function() {
 
-    $(".hidden").css("display", "block");
-
     $(".section-right-arrow").on("click", function(){
       $.fn.fullpage.moveSlideRight();
     });
@@ -121,6 +119,8 @@
       });
       return $template;
     }
+
+    // $(".hidden").css("display", "block");
 
 });
 
