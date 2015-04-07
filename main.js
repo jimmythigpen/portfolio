@@ -120,7 +120,7 @@
       return $template;
     }
 
-    // $(".hidden").css("display", "block");
+    $(".hidden").css("display", "block");
 
 });
 
