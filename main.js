@@ -2,6 +2,23 @@
 
   $(document).ready(function() {
 
+    $(".section-right-arrow").on("click", function(){
+      $.fn.fullpage.moveSlideRight();
+    });
+
+    $(".section-left-arrow").on("click", function(){
+      $.fn.fullpage.moveSlideLeft();
+    });
+
+    $(".mobile-right").on("click", function(){
+      $.fn.fullpage.moveSlideRight();
+    });
+
+    $(".mobile-left").on("click", function(){
+      $.fn.fullpage.moveSlideLeft();
+    });
+
+
     $('.photoset-grid-basic').photosetGrid({
       highresLinks: true,
       lowresWidth: 9999,
@@ -16,16 +33,57 @@
        paddingBottom: '50px',
        slidesNavigation: true,
        controlArrows: false,
-      //  fixedElements: '.nav',
-      //  fixedElements: '.nav',
        fitToSection: false,
       //  resize: true,
       // scrollOverflow: true,
       // autoScrolling:false
       responsive: 800,
-      touchSensitivity: 15
+      touchSensitivity: 15,
+
+
+      afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+            var loadedSlide = $(this);
+            if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 2 || slideIndex == 3 || slideIndex == 4 || slideIndex == 5 || slideIndex == 6 || slideIndex == 7 || slideIndex == 8){
+              $(".section-left-arrow").css("z-index", 3);
+              $(".section-right-arrow").css("z-index", 3);
+              } else {
+              $(".section-left-arrow").css("z-index", 1);
+              $(".section-right-arrow").css("z-index", 1);
+              }
+        },
+
+        onSlideLeave: function( anchorLink, index, slideIndex, direction){
+           var leavingSlide = $(this);
+
+           if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 8 && direction == 'left'){
+             $(".section-left-arrow").css("z-index", 1);
+             $(".section-right-arrow").css("z-index", 1);
+           }
+
+       },
+
+      //  afterResize: function(){
+      //       var pluginContainer = $(this);
+      //       if ($(window).width() < 600) {
+      //         console.log('hi');
+      //       }
+      //   }
+
+      //  afterLoad: function(anchorLink, index){
+      //      var loadedSection = $(this);
+      //      if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 2 || slideIndex == 3 || slideIndex == 4 || slideIndex == 5 || slideIndex == 6 || slideIndex == 7 || slideIndex == 8){
+      //        $(".section-left-arrow").css("z-index", 3);
+      //        $(".section-right-arrow").css("z-index", 3);
+      //        } else {
+      //          $(".section-left-arrow").css("z-index", 1);
+      //          $(".section-right-arrow").css("z-index", 1);
+      //        }
+      //      }
 
     });
+
+
+
 
     var blogURL = 'http://api.tumblr.com/v2/blog/jimmythigpen.tumblr.com/posts/text?api_key=wSCsrQNh71emdz0eTvoZvt4pCkszK7noN9laB0cSCPQtUBRvMG&jsonp=?';
 

@@ -61,7 +61,7 @@ html, body {
 }
 .fp-controlArrow {
     position: absolute;
-    z-index: 4;
+    z-index: 99;
     top: 50%;
     cursor: pointer;
     width: 0;

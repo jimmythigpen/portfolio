@@ -54,14 +54,24 @@ html {
   top: 45%;
   font-size: 3em;
   left: 10px;
-  z-index: 1; }
+  z-index: 1;
+  cursor: pointer;
+  transition: all 300ms; }
 
 .section-right-arrow {
   position: absolute;
   top: 45%;
   font-size: 3em;
   right: 10px;
-  z-index: 1; }
+  z-index: 1;
+  cursor: pointer;
+  transition: all 300ms; }
+
+.mobile-left {
+  cursor: pointer; }
+
+.mobile-right {
+  cursor: pointer; }
 
 /*
  * Animation for Chevron
@@ -109,7 +119,8 @@ html {
   color: #f9f9f9; }
 
 .first-page {
-  text-align: center; }
+  text-align: center;
+  /* padding: 55px 0 50px; */ }
   .first-page h1 {
     font-size: 6.3em;
     font-weight: 400;
@@ -123,6 +134,17 @@ html {
     margin: 0;
     color: #26131c; }
 
+/* .second-page {
+  padding: 0;
+}
+
+.third-page {
+  padding: 55px 0 50px;
+}
+
+.fourth-page {
+  padding: 55px 0 50px;
+} */
 .featured-work {
   /* font-size: 3.5vmax; */
   font-size: 3em;
@@ -135,13 +157,18 @@ html {
     color: #26131c; }
 
 .explore-work {
-  font-size: 3em;
+  font-size: 2.5em;
   margin-top: 0;
   text-align: center;
   font-family: Roboto, sans-serif;
   font-weight: 300;
   color: #26131c;
-  margin: .5em 0; }
+  margin: 0 0 .5em 0;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  z-index: 3; }
 
 .blog-container {
   max-width: 95%;
@@ -164,6 +191,8 @@ html {
   width: 24.5%;
   vertical-align: top;
   display: inline-block; }
+  .title-list-container ul li:first-child h4 {
+    margin-top: 0; }
 
 .preview-list-container {
   display: inline-block;
@@ -201,7 +230,7 @@ figure {
   /* font-size: 3vmax; */
   font-size: 1.5em;
   font-weight: 400;
-  margin: 1% 0;
+  margin: 0 0 1% 0;
   color: #212121;
   display: inline-block; }
 
@@ -301,7 +330,7 @@ figure {
   width: 85%;
   text-align: center;
   margin: 20px auto 0;
-  height: 100px; }
+  height: 60px; }
 
 .contact-links {
   margin-top: 15px;
@@ -347,7 +376,7 @@ footer {
 
 .photoset-grid-basic {
   margin: 0 auto;
-  z-index: 99; }
+  z-index: 0; }
   .photoset-grid-basic img {
     transition: all 300ms; }
 
@@ -464,7 +493,10 @@ footer {
     display: none; }
 
   .section-right-arrow {
-    display: none; } }
+    display: none; }
+
+  .about-contact {
+    height: 100px; } }
 @media screen and (max-height: 800px) {
   .project-image {
     max-height: 65%;
