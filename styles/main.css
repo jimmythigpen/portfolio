@@ -529,17 +529,20 @@ footer {
   .explore-work {
     display: none; }
 
-  .section-left-arrow {
-    display: block; }
+  /* .section-left-arrow {
+    display: block;
+  }
 
   .section-right-arrow {
-    display: block; }
-
-  .slide-1 {
-    position: static; }
-
+    display: block;
+  } */
+  /*   .slide-1 {
+    position: static;
+  }
+  
   .featured-work {
-    font-size: 2em; } }
+    font-size: 2em;
+  } */ }
 @media screen and (max-height: 450px) {
   .project-image {
     display: none; } }
