@@ -1,9 +1,10 @@
+$("body").css("display", "none");
+
 (function(){
 
-  $("body").css("display", "none");
-
-
   $(document).ready(function() {
+
+    $("body").css("display", "block");
 
     $(".section-right-arrow").on("click", function(){
       $.fn.fullpage.moveSlideRight();
@@ -123,9 +124,6 @@
       return $template;
     }
 
-    $("body").css("display", "block");
 });
-
-
 
 }());
