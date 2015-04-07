@@ -25,7 +25,7 @@
     });
 
     $('#fullpage').fullpage({
-       anchors:['home', 'work', 'blog', 'about'],
+       anchors:['home', 'work', 'blog', 'contact'],
        menu: '.nav',
        paddingTop: '55px',
        paddingBottom: '50px',

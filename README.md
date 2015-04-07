@@ -1,3 +1,3 @@
 # Welcome to my portfolio's repo
 
-## Check it out [Here!](www.jimmythigpen.com)
+## Check it out [Here!](http://jimmythigpen.com)
