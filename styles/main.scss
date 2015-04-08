@@ -23,8 +23,8 @@ html {
 
 $font-stack: 'Roboto', sans-serif;
 $white: #f9f9f9;
-$primary-text: #212121;
-$secondary-text: #26131c;
+/* $primary-text: #26131c; */
+$primary-text: #252525;
 $hint-text: #727272;
 
 .first-page {
@@ -72,7 +72,10 @@ $hint-text: #727272;
   left: 10px;
   z-index: 1;
   cursor: pointer;
-  transition: all 300ms;
+  color: $primary-text;
+  transition: all 500ms;
+  opacity: 0;
+
 }
 
 .section-right-arrow {
@@ -82,7 +85,9 @@ $hint-text: #727272;
   right: 10px;
   z-index: 1;
   cursor: pointer;
-  transition: all 300ms;
+  color: $primary-text;
+  transition: all 500ms;
+  opacity: 0;
 }
 
 .mobile-left {
@@ -145,7 +150,7 @@ $hint-text: #727272;
     font-weight: 400;
     font-family: Hagin-Medium, sans-serif;
     margin: 0;
-    color: $secondary-text;
+    color: $primary-text;
   }
 
   h3 {
@@ -153,7 +158,7 @@ $hint-text: #727272;
     font-weight: 400;
     font-family: Antonio-Medium, sans-serif;
     margin: 0;
-    color: $secondary-text;
+    color: $primary-text;
   }
 }
 
@@ -163,10 +168,10 @@ $hint-text: #727272;
   text-align: center;
   font-family: $font-stack;
   font-weight: 300;
-  color: $secondary-text;
+  color: $primary-text;
 
   .fa {
-    color: $secondary-text;
+    color: $primary-text;
   }
 }
 
@@ -176,13 +181,18 @@ $hint-text: #727272;
   text-align: center;
   font-family: $font-stack;
   font-weight: 300;
-  color: $secondary-text;
+  color: $primary-text;
   margin: 0 0 .5em 0;
   position: absolute;
   top: 5%;
   left: 5%;
   right: 5%;
   z-index: 3;
+
+  a {
+    text-decoration: none;
+    color: $primary-text;
+  }
 }
 
 .hidden {
@@ -203,7 +213,7 @@ $hint-text: #727272;
   font-weight: 300;
   font-size: 3em;
   margin-top: 0;
-  color: $secondary-text;
+  color: $primary-text;
 
   img {
     height: .7em;
@@ -358,7 +368,7 @@ figure {
   font-weight: 300;
   font-size: 3em;
   margin-top: 0;
-  color: $secondary-text;
+  color: $primary-text;
 }
 
 .about-left {

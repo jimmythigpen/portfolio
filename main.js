@@ -20,6 +20,11 @@
       $.fn.fullpage.moveSlideLeft();
     });
 
+    $(".work-nav").on("click", function(){
+      $(".section-left-arrow").css("z-index", 1);
+      $(".section-right-arrow").css("z-index", 1);
+    });
+
     $('.photoset-grid-basic').photosetGrid({
       highresLinks: true,
       lowresWidth: 9999,
@@ -42,6 +47,10 @@
         if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 2 || slideIndex == 3 || slideIndex == 4 || slideIndex == 5 || slideIndex == 6 || slideIndex == 7 || slideIndex == 8){
           $(".section-left-arrow").css("z-index", 3);
           $(".section-right-arrow").css("z-index", 3);
+          setTimeout(function(){
+            $(".section-left-arrow").css("opacity", 1);
+            $(".section-right-arrow").css("opacity", 1);
+          }, 800);
           } else {
           $(".section-left-arrow").css("z-index", 1);
           $(".section-right-arrow").css("z-index", 1);
