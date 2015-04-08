@@ -119,14 +119,16 @@
           if(options.highresLinks){
             $images.each(function(){
               var highres;
+              var name;
               // If a highres image exists link it up!
               if($(this).attr('data-highres')){
                   highres = $(this).attr('data-highres');
+                  name = $(this).attr('alt');
               } else {
                   highres = $(this).attr('src');
               }
               $(this).wrapAll('<a href="' + highres + '" class="photoset-cell highres-link" />');
-              $(this).after('<div class="view-text"><p>Explore</p></div>');
+              $(this).after('<div class="view-text"><p>' + name + '</p></div>');
             });
 
 

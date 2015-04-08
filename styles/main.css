@@ -383,7 +383,7 @@ footer {
   .view-text p {
     text-align: center;
     font-family: Hagin-Medium, sans-serif;
-    font-size: 4vmax;
+    font-size: 2.75vw;
     opacity: 0;
     color: #f9f9f9;
     transition: all 300ms;
