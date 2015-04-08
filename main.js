@@ -2,8 +2,6 @@
 
   $(document).ready(function() {
 
-    $(".hidden").css("display", "table");
-
     $(".section-right-arrow").on("click", function(){
       $.fn.fullpage.moveSlideRight();
     });
@@ -122,7 +120,7 @@
       return $template;
     }
 
-
+    $(".hidden").css("display", "table");
 
 });
 
