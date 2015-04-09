@@ -80,15 +80,17 @@
     });
 
     function renderListings(posts) {
+      var append;
       var slicedPosts = posts.slice(0,3);
       slicedPosts.forEach(function(post) {
 
       function truncate (text, limit) {
-        if (typeof text.body !== 'string')
+        if (typeof text.body !== 'string') {
           return '';
-        if (typeof append == 'undefined')
-          console.log();
+        }
+        else {
           append = ('...' + '<a href=' + text.post_url + '> continue reading</a>');
+        }
         var parts = text.body.split(' ');
         if (parts.length > limit) {
           for (var i = parts.length - 1; i > -1; --i) {
