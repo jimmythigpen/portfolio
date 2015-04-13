@@ -28,16 +28,19 @@ $primary-text: #252525;
 $hint-text: #727272;
 
 .first-page {
-  background: linear-gradient(rgba(197, 198, 123, .8), rgba(197, 198, 123, .8)), url("../images/bg.png");
+  background: linear-gradient(rgba(93, 145, 125, .8), rgba(93, 145, 125, .8)), url("../images/bg.png");
 }
+
 .second-page {
-  background: linear-gradient(rgba(55, 68, 80, .8), rgba(55, 68, 80, .8)), url("../images/bg.png");
+  background: linear-gradient(rgba(230, 212, 167, .8), rgba(230, 212, 167, .8)), url("../images/bg.png");
 }
+
 .third-page {
-  background: linear-gradient(rgba(249, 249, 249, .8), rgba(249, 249, 249, .8)), url("../images/bg.png");
+  background: linear-gradient(rgba(168, 173, 128, .8), rgba(168, 173, 128, .8)), url("../images/bg.png");
 }
+
 .fourth-page {
-  background: linear-gradient(rgba(129, 116, 97, .8), rgba(129, 116, 97, .8)), url("../images/bg.png");
+  background: linear-gradient(rgba(130, 85, 52, .8), rgba(130, 85, 52, .8)), url("../images/bg.png");
 }
 
 .nav {
