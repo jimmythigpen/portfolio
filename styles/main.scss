@@ -23,9 +23,7 @@ html {
 
 $font-stack: 'Roboto', sans-serif;
 $white: #f9f9f9;
-/* $primary-text: #26131c; */
-$primary-text: #252525;
-$hint-text: #727272;
+$primary-text: #36362c;
 
 .first-page {
   background: linear-gradient(rgba(93, 145, 125, .8), rgba(93, 145, 125, .8)), url("../images/bg.png");
@@ -262,7 +260,7 @@ figure {
 .blog-date {
   font-family: $font-stack;
   font-size: .8em;
-  color: $hint-text;
+  color: $primary-text;
 }
 
 .blog-title-preview {
@@ -282,7 +280,7 @@ figure {
   font-weight: 300;
 
   a {
-    color: $hint-text;
+    color: $white;
     font-size: 1em;
     text-decoration: none;
   }
