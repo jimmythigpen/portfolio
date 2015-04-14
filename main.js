@@ -4,6 +4,17 @@
 
     $(".hidden").css("display", "table");
 
+    $(".heading").typed({
+      strings: ["I'm a ^100 front end ^200 web deve^250loper.", "I recently ^200 graduated from ^100 The Iron ^250 Yard.", "My tools are ^100 html, ^150 css^100, and javascript.", "I love ^100 creating visual experi^150ences."],
+      contentType: 'html',
+      typeSpeed: 30,
+      startDelay: 1000,
+      showCursor: true,
+      cursorChar: '_',
+      loop: true,
+      backDelay: 2000,
+    });
+
     $(".section-right-arrow").on("click", function(){
       $.fn.fullpage.moveSlideRight();
     });

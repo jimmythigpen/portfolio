@@ -100,27 +100,57 @@ $primary-text: #36362c;
 }
 
 /*
+ * Animation for typing
+*/
+.typed-cursor {
+  font-size: 2em;
+  color: $primary-text;
+  font-weight: 400;
+  font-family: Antonio-Medium, sans-serif;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/*
  * Animation for Chevron
 */
 .animated {
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    animation-name: bounce;
-    -webkit-animation-name: bounce;
-    -moz-animation-name: bounce;
-    animation-iteration-count: 100;
-    -webkit-animation-iteration-count: 100;
-    -moz-animation-iteration-count: 100;
-    animation-direction: alternate;
-    -webkit-animation-direction: alternate;
-    -moz-animation-direction: alternate;
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    animation-delay: .5s;
-    -webkit-animation-delay: .5s;
-    -moz-animation-delay: .5s;
+  animation-duration: .8s;
+  -webkit-animation-duration: .8s;
+  -moz-animation-duration: .8s;
+  animation-name: bounce;
+  -webkit-animation-name: bounce;
+  -moz-animation-name: bounce;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  animation-delay: .5s;
+  -webkit-animation-delay: .5s;
+  -moz-animation-delay: .5s;
 }
 @keyframes bounce {
     0% {transform: translateY(0px);}
@@ -160,6 +190,7 @@ $primary-text: #36362c;
     font-family: Antonio-Medium, sans-serif;
     margin: 0;
     color: $primary-text;
+    display: inline;
   }
 }
 
@@ -591,6 +622,13 @@ footer {
 
   .featured-work {
     font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .first-page .fp-tableCell {
+  padding-top: 30%;
+  vertical-align: baseline;
   }
 }
 
