@@ -5,10 +5,10 @@
     $(".hidden").css("display", "table");
 
     $(".heading").typed({
-      strings: ["I'm a ^100 front end ^200 web deve^250loper.", "I recently ^200 graduated from ^100 The Iron ^250 Yard.", "My tools are ^100 html, ^150 css^100, and javascript.", "I love ^100 creating visual experi^150ences."],
+      strings: ["I'm a ^100 front end ^200 web deve^250loper.", "I recently ^200 graduated from ^100 The ^250 Iron Yard.", "My tools are ^100 html, ^150 css^100, and java^100script.", "I love ^100 creating ^200 visual experi^150ences."],
       contentType: 'html',
       typeSpeed: 30,
-      startDelay: 1000,
+      startDelay: 1500,
       showCursor: true,
       cursorChar: '_',
       loop: true,
@@ -126,13 +126,15 @@
     function renderTitles(posts){
     var slicedTitles = posts.slice(0,7);
     slicedTitles.forEach(function(post) {
-    var momentDate = moment(post.date).endOf('day').fromNow();
-    var postInfo = renderTemplate('post-title-list', {
-      title: post.title,
-      url: post.post_url,
-      date: momentDate
-    });
-    $titleList.append(postInfo);
+      var postDate = post.date;
+      postDate = postDate.substring(0, postDate.length - 4);
+      var momentDate = moment(postDate).endOf('day').fromNow();
+      var postInfo = renderTemplate('post-title-list', {
+        title: post.title,
+        url: post.post_url,
+        date: momentDate
+      });
+      $titleList.append(postInfo);
     });
   }
 
