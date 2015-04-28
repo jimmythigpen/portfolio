@@ -2,6 +2,8 @@
 
   $(document).ready(function() {
 
+    console.log("Thanks for checking out for portfolio curious one, I hope my code is neat and semantic. When you're done looking around you should email me, or how about a phone call? Spontaneous conversation is always fun, and I bet we could be friends!");
+
     $(".hidden").css("display", "table");
 
     $(".heading").typed({
@@ -12,7 +14,7 @@
       showCursor: true,
       cursorChar: '_',
       loop: true,
-      backDelay: 2000,
+      backDelay: 1500,
     });
 
     $(".section-right-arrow").on("click", function(){
@@ -145,8 +147,6 @@
       });
       return $template;
     }
-
-
 
 });
 
