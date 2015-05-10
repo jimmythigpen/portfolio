@@ -128,9 +128,8 @@
     function renderTitles(posts){
     var slicedTitles = posts.slice(0,7);
     slicedTitles.forEach(function(post) {
-      var postDate = post.date;
-      postDate = postDate.substring(0, postDate.length - 4);
-      var momentDate = moment(postDate).endOf('day').fromNow();
+      var postDate = new Date(post.date);
+      var momentDate = moment(postDate).startOf('hour').fromNow();
       var postInfo = renderTemplate('post-title-list', {
         title: post.title,
         url: post.post_url,
