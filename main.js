@@ -7,7 +7,7 @@
     $(".hidden").css("display", "table");
 
     $(".heading").typed({
-      strings: ["I'm a ^100 front end ^200 web deve^250loper.", "I recently ^200 graduated from ^100 The ^250 Iron Yard.", "My tools are ^100 html, ^150 css^100, and java^100script.", "I love ^100 creating ^200 visual experi^150ences."],
+      strings: ["I'm a ^100 front end ^200 web deve^100loper.", "I recently ^200 graduated from ^100 The ^250 Iron Yard.", "My tools are ^100 html, ^150 css^100, and java^100script.", "I love ^100 creating ^200 visual experi^150ences."],
       contentType: 'html',
       typeSpeed: 30,
       startDelay: 1500,
@@ -115,7 +115,7 @@
           }
           return parts.join(' ');
         }
-        var newPostBody = truncate(post, 36);
+        var newPostBody = truncate(post, 40);
         var previewInfo = renderTemplate('post-preview-list', {
           title: post.title,
           body: newPostBody,
