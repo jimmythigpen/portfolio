@@ -2,7 +2,7 @@
 
   $(document).ready(function() {
 
-    console.log("Thanks for checking out for portfolio curious one, I hope my code is neat and semantic. When you're done looking around you should email me, or how about a phone call? Spontaneous conversation is always fun, and I bet we could be friends!");
+    console.log("Thanks for checking out for portfolio curious one. I hope my code is neat and semantic! When you're done looking around you should email me, spontaneous conversation is always fun - and I bet we could be friends!");
 
     $(".hidden").css("display", "table");
 
@@ -70,13 +70,13 @@
           }
         },
 
-        onSlideLeave: function( anchorLink, index, slideIndex, direction){
-         var leavingSlide = $(this);
-         if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 8 && direction == 'left'){
-           $(".section-left-arrow").css("z-index", 1);
-           $(".section-right-arrow").css("z-index", 1);
-         }
-       },
+      onSlideLeave: function( anchorLink, index, slideIndex, direction){
+        var leavingSlide = $(this);
+        if(anchorLink == 'work' && slideIndex == 1 || slideIndex == 8 && direction == 'left'){
+         $(".section-left-arrow").css("z-index", 1);
+         $(".section-right-arrow").css("z-index", 1);
+          }
+        },
     });
 
     var blogURL = 'http://api.tumblr.com/v2/blog/jimmythigpen.tumblr.com/posts/text?api_key=wSCsrQNh71emdz0eTvoZvt4pCkszK7noN9laB0cSCPQtUBRvMG&jsonp=?';
@@ -87,7 +87,6 @@
       url: blogURL,
       dataType: 'jsonp'
     }).done(function(response) {
-
       renderListings(response.response.posts);
       renderTitles(response.response.posts);
     });
@@ -96,25 +95,22 @@
       var append;
       var slicedPosts = posts.slice(0,3);
       slicedPosts.forEach(function(post) {
-
-      function truncate (text, limit) {
-        if (typeof text.body !== 'string') {
-          return '';
-        }
-        else {
-          append = ('...' + '<a href=' + text.post_url + '> continue reading</a>');
-        }
-        var parts = text.body.split(' ');
-        if (parts.length > limit) {
-          for (var i = parts.length - 1; i > -1; --i) {
-            if (i+1 > limit) {
-              parts.length = i;
-              }
-            }
-            parts.push(append);
+        function truncate (text, limit) {
+          if (typeof text.body !== 'string') {
+            return '';
+          } else {
+            append = ('...' + '<a href=' + text.post_url + '> continue reading</a>');
           }
-          return parts.join(' ');
-        }
+          var parts = text.body.split(' ');
+          if (parts.length > limit) {
+            for (var i = parts.length - 1; i > -1; --i) {
+              if (i+1 > limit) {
+                parts.length = i;
+              }
+            } parts.push(append);
+          }
+            return parts.join(' ');
+          }
         var newPostBody = truncate(post, 40);
         var previewInfo = renderTemplate('post-preview-list', {
           title: post.title,
@@ -126,18 +122,18 @@
     }
 
     function renderTitles(posts){
-    var slicedTitles = posts.slice(0,7);
-    slicedTitles.forEach(function(post) {
-      var postDate = new Date(post.date);
-      var momentDate = moment(postDate).startOf('hour').fromNow();
-      var postInfo = renderTemplate('post-title-list', {
-        title: post.title,
-        url: post.post_url,
-        date: momentDate
+      var slicedTitles = posts.slice(0,7);
+      slicedTitles.forEach(function(post) {
+        var postDate = parseDate(post.date);
+        var momentDate = moment(postDate).startOf('hour').fromNow();
+        var postInfo = renderTemplate('post-title-list', {
+          title: post.title,
+          url: post.post_url,
+          date: momentDate
+        });
+        $titleList.append(postInfo);
       });
-      $titleList.append(postInfo);
-    });
-  }
+    }
 
     function renderTemplate(name, data) {
       var $template = $('[data-template-name=' + name + ']').text();
@@ -146,7 +142,11 @@
       });
       return $template;
     }
-
 });
+
+  function parseDate(date) {
+    var parts = date.match(/(\d+)/g);
+    return new Date(parts[0], parts[1]-1, parts[2]);
+  }
 
 }());
