@@ -436,7 +436,7 @@ footer {
     width: 100%;
     padding-top: 50px; }
   .view-text:hover {
-    background-color: rgba(0, 0, 0, 0.6); }
+    background-color: rgba(0, 0, 0, 0.5); }
     .view-text:hover p {
       opacity: 1;
       padding-top: 0; }

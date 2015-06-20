@@ -54,6 +54,7 @@
        fitToSection: false,
        responsive: 800,
        touchSensitivity: 15,
+       easingcss3: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
 
       afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
         var loadedSlide = $(this);
@@ -124,8 +125,7 @@
     function renderTitles(posts){
       var slicedTitles = posts.slice(0,7);
       slicedTitles.forEach(function(post) {
-        var postDate = parseDate(post.date);
-        var momentDate = moment(postDate).startOf('hour').fromNow();
+        var momentDate = moment.utc(post.date, "YYYY-MM-DD HH:mm:ss").startOf('hour').fromNow();
         var postInfo = renderTemplate('post-title-list', {
           title: post.title,
           url: post.post_url,
@@ -143,10 +143,5 @@
       return $template;
     }
 });
-
-  function parseDate(date) {
-    var parts = date.match(/(\d+)/g);
-    return new Date(parts[0], parts[1]-1, parts[2]);
-  }
 
 }());
