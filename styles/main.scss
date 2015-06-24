@@ -3,6 +3,7 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -76,7 +77,6 @@ $primary-text: #36362c;
   color: $primary-text;
   transition: all 500ms;
   opacity: 0;
-
 }
 
 .section-right-arrow {
@@ -252,6 +252,7 @@ $primary-text: #36362c;
     border-radius: 3px;
   }
 }
+
 .title-list-container {
   width: 24.5%;
   vertical-align: top;
@@ -260,7 +261,6 @@ $primary-text: #36362c;
   ul li:first-child h4{
     margin-top: 0;
   }
-
 }
 .preview-list-container {
   display: inline-block;
@@ -276,6 +276,7 @@ $primary-text: #36362c;
   margin: 0;
   padding: 0;
 }
+
 figure {
   display: none;
 }
@@ -492,19 +493,25 @@ footer {
   z-index: 0;
 
   img {
-    transition: all 300ms;
+    transition: all 300ms cubic-bezier(0.57, 0.13, 0.17, 1);
+    -webkit-transition: all 300ms cubic-bezier(0.57, 0.13, 0.17, 1);
+    opacity: .5;
   }
 }
 .photoset-cell {
   position: relative;
   overflow: hidden;
+  background-color: #000;
+
   &:hover {
+
     img {
-      transform: scale(1.3);
-      -ms-transform: scale(1.3);
-      -moz-transform: scale(1.3);
-      -webkit-transform: scale(1.3);
-      -o-transform: scale(1.3);
+      transform: scale(1.3, 1.3);
+      -ms-transform: scale(1.3, 1.3);
+      -moz-transform: scale(1.3, 1.3);
+      -webkit-transform: scale(1.3, 1.3);
+      -o-transform: scale(1.3, 1.3);
+      opacity: .2;
     }
   }
 }
@@ -519,33 +526,19 @@ footer {
 .view-text {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0);
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 300ms;
 
   p {
     text-align: center;
     font-family: Hagin-Medium, sans-serif;
     font-size: 2.75vw;
-    opacity: 0;
+    opacity: 1;
     color: $white;
-    transition: all 300ms;
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    padding-top: 50px;
-  }
-
-  &:hover {
-    background-color: rgba(0, 0, 0, .5);
-
-
-    p {
-      opacity: 1;
-      padding-top: 0;
-    }
   }
 }
 
